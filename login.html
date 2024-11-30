@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login authentication</title>
+</head>
+<style>
+  body{
+    background-image: url(red.jpg);
+    text-align: center;
+    color:blueviolet;
+    
+  }
+  
+
+</style>
+<body>
+    <h2>login</h2>
+    <form id="loginform" onsubmit="login()">
+        <label for="username">username: </label>
+        <input type="text" id="username" name="username" required>
+    <br><br>
+    <label for="password">password</label>
+    <input type="password" id="password" name="pasaword" required>
+    <br><br>
+    <input type="submit" value="login"></input>
+    <input type="reset" value="batal"></input>
+    </form>
+
+    <script>
+       function login(){
+          let user = document.getElementById("username").value;
+          let pass = document.getElementById("password").value;
+          let form = document.getElementById("loginform");
+
+          if (user == "adiel" && pass == "12345"){
+            alert("login berhasil");
+            form.setAttribute("action", "../projectweb/project.html");
+          } else{
+            alert("login gagal, coba lagi ya!");
+          }
+          
+       } 
+    </script>
+</body>
+</html>
